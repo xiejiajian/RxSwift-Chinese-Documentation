@@ -1,11 +1,10 @@
-<img src="assets/Rx_Logo_M.png" alt="Miss Electric Eel 2016" width="36" height="36"> RxSwift: ReactiveX for Swift
-======================================
+# RxSwift 中文文档
 
-[![Travis CI](https://travis-ci.org/ReactiveX/RxSwift.svg?branch=master)](https://travis-ci.org/ReactiveX/RxSwift) ![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-333333.svg) ![pod](https://img.shields.io/cocoapods/v/RxSwift.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager) 
+[![Travis CI](https://travis-ci.org/ReactiveX/RxSwift.svg?branch=master)](https://travis-ci.org/ReactiveX/RxSwift) ![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-333333.svg) ![pod](https://img.shields.io/cocoapods/v/RxSwift.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
 [ReactiveX](http://reactivex.io/)（简写: Rx） 是一个可以帮助我们简化异步编程的框架。
 
-[RxSwift] 是 [Rx](https://github.com/Reactive-Extensions/Rx.NET) 的 **Swift** 版本。
+\[RxSwift\] 是 [Rx](https://github.com/Reactive-Extensions/Rx.NET) 的 **Swift** 版本。
 
 它尝试将原有的一些概念移植到 iOS/macOS 平台。
 
@@ -19,31 +18,30 @@ KVO，异步操作 和 流 全部被统一成抽象序列。这就是为什么 R
 
 [下载文档电子书](https://github.com/beeth0ven/RxSwift-Chinese-Documentation/releases/download/2.0.0/RxSwiftChineseDocumentation.epub)
 
-
 ## 文档更新日志
 
 #### 19年5月21日（RxSwift 5）
 
-* [RxSwift 5 更新了什么？](content/recipes/whats_new_in_rxswift_5.md)
-* 引入[食谱章节](content/recipes.md)
-* [Signal](content/rxswift_core/observable/signal.md)
-* [RxRelay](content/recipes/rxrelay.md)
-* [纯函数](content/recipes/pure_function.md)
-* [附加作用](content/recipes/side_effects.md)
-* [共享附加作用](content/recipes/share_side_effects.md)
+* [RxSwift 5 更新了什么？](recipes/whats_new_in_rxswift_5.md)
+* 引入[食谱章节](recipes/)
+* [Signal](rxswift_core/observable/signal.md)
+* [RxRelay](recipes/rxrelay.md)
+* [纯函数](recipes/pure_function.md)
+* [附加作用](recipes/side_effects.md)
+* [共享附加作用](recipes/share_side_effects.md)
 * 更新文档以适配 RxSwift 5
 * 更新 QQ 群号为：871293356
 
-  **[查看更多... ](CHANGELOG.md)**
-
+  [**查看更多...** ](about/changelog.md)
 
 ## 示例
 
 Github 搜索...
 
-![](assets/GithubSearch.gif)
+![](.gitbook/assets/GithubSearch.gif)
 
 定义搜索结果 ...
+
 ```swift
 let searchResults = searchBar.rx.text.orEmpty
     .throttle(0.3, scheduler: MainScheduler.instance)
@@ -70,8 +68,6 @@ searchResults
     .disposed(by: disposeBag)
 ```
 
-------
-
 ## 必备条件
 
 * Xcode 10.2
@@ -91,7 +87,7 @@ searchResults
 
 ### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
 
-** **`pod --version`**: **`1.3.1` 已通过测试
+ ****`pod --version`**:** `1.3.1` 已通过测试
 
 ```ruby
 # Podfile
@@ -121,7 +117,7 @@ $ pod install
 
 添加到 `Cartfile`
 
-```
+```text
 github "ReactiveX/RxSwift" ~> 5.0
 ```
 
@@ -129,9 +125,9 @@ github "ReactiveX/RxSwift" ~> 5.0
 $ carthage update
 ```
 
-**[Carthage](https://github.com/Carthage/Carthage) 作为静态库。**
+[**Carthage**](https://github.com/Carthage/Carthage) **作为静态库。**
 
-如果您希望使用 Carthage 将 [RxSwift] 构建为静态库，在使用 Carthage 构建之前，您可以使用以下脚本手动修改框架类型：
+如果您希望使用 Carthage 将 \[RxSwift\] 构建为静态库，在使用 Carthage 构建之前，您可以使用以下脚本手动修改框架类型：
 
 ```bash
 carthage update RxSwift --platform iOS --no-build
@@ -180,5 +176,5 @@ $ git submodule add git@github.com:ReactiveX/RxSwift.git
 * 拖拽 `Rx.xcodeproj` 到项目中
 * 前往 `Project > Targets > Build Phases > Link Binary With Libraries`, 点击 `+` 并且选中 `RxSwift-[Platform]` 和 `RxCocoa-[Platform]`
 
+\[RxSwift\]:[https://github.com/ReactiveX/RxSwift](https://github.com/ReactiveX/RxSwift)
 
-[RxSwift]:https://github.com/ReactiveX/RxSwift
